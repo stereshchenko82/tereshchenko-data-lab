@@ -338,7 +338,7 @@ ORDER BY total_price DESC;
 
 -- Завдання 8.7 (UPDATE).
 UPDATE products_with_categories
-SET categories = categories || 'Топ-продаж'
+SET categories = categories || ARRAY['Топ-продаж']
 WHERE NOT ('Топ-продаж' = ANY(categories));
 
 -- Завдання 8.7 (CHECK).
